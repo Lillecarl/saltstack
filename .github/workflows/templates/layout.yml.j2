@@ -45,6 +45,9 @@ concurrency:
 
 jobs:
 
+  <%- block pre_jobs %>
+  <%- endblock pre_jobs %>
+
   <%- block prepare_workflow_job %>
   <%- do conclusion_needs.append('prepare-workflow') %>
   prepare-workflow:
