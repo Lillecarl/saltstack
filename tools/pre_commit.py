@@ -55,9 +55,19 @@ def generate_workflows(ctx: Context):
         },
         "Nightly": {
             "template": "nightly.yml",
+            "includes": {
+                "pre-commit": False,
+                "lint": False,
+                "salt-tests": False,
+            },
         },
         "Stage Release": {
             "template": "staging.yml",
+            "includes": {
+                "pre-commit": False,
+                "lint": False,
+                "salt-tests": False,
+            },
         },
         "Scheduled": {
             "template": "scheduled.yml",
